@@ -1,12 +1,15 @@
 import React from 'react';
 
 const Character = ({character}) => {
-    const {id,name,species,image} = character;
+    const {id,name,status,species,gender,image} = character;
     return (
         <div>
-            <h5>{id}</h5>
-            <h3>{name}</h3>
-            <h4>{species}</h4>
+            <h3>id:{id} {name}</h3>
+            <ul>
+                <li>{species}</li>
+                <li>{status}</li>
+                <li>{gender}</li>
+            </ul>
             <img src={image} alt={name}/>
             <hr/>
         </div>
