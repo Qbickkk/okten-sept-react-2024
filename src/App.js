@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import {Posts} from "./components /PostContainer/Posts/Posts";
+import {Posts} from "./components/PostContainer/Posts/Posts";
 
 const App = () => {
     return (
