@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 
 import {carService} from "../../../services/carService";
 
-const CarForm = ({setTrigger, carForUpdate}) => {
+const CarForm = ({setTrigger, carForUpdate, setCarForUpdate}) => {
 
     const {reset,handleSubmit,register, formState:{errors,isValid}, setValue} = useForm({
         mode:'all'
@@ -18,6 +18,7 @@ const CarForm = ({setTrigger, carForUpdate}) => {
     const update = async (car) => {
         await carService.updateById(carForUpdate.id, car);
         setTrigger(prev=>!prev);
+        setCarForUpdate(null);
         reset();
     };
 
