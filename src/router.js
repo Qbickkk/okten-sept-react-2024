@@ -9,7 +9,7 @@ const router = createBrowserRouter([
         {path:'albums',element:<AlbumsPage/>},
         {path:'todos',element:<TodosPage/>},
         {path:'comments',element:<CommentsPage/>},
-        {path:'posts/:id',element:<PostsPage/>}
+        {path:'post/:id',element:<PostsPage/>}
     ]}
 ]);
 
