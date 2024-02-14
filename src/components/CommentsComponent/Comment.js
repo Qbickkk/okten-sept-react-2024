@@ -16,6 +16,7 @@ const Comment = ({comment}) => {
             <div>body:{body}</div>
             <button onClick={()=>navigate(`/post/${postId}`)}>Get Post</button>
             <br/>
+            <br/>
         </div>
     );
 };
