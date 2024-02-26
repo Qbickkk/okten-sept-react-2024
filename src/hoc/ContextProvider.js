@@ -4,10 +4,10 @@ import React, {createContext, useState} from 'react';
 const Context = createContext(null);
 const ContextProvider = ({children}) => {
 
-    const [episodes, setEpisodes] = useState([]);
-    
+    const state = useState(null);
+
     return (
-        <Context.Provider value={{setEpisodes,episodes}}>
+        <Context.Provider value={state}>
             {children}
         </Context.Provider>
     );

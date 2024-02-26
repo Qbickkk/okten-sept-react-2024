@@ -4,11 +4,11 @@ const episodes = '/episode';
 const characters = '/character';
 
 const urls = {
-    episodes:{
-        base: episodes,
-        byId:(id)=>`${episodes}/${id}`
+    episodes,
+    characters:{
+        byIds:(ids)=>`${characters}/${ids}`
     }
-};
+}
 
 export {
     baseURL,

@@ -1,3 +1,5 @@
 export * from './Header/Header'
 export * from './EpisodesContainer/Episodes/Episodes'
 export * from './EpisodesContainer/Episode/Episode'
+export * from './CharactersContainer/Characters/Characters'
+export * from './CharactersContainer/Character/Character'
