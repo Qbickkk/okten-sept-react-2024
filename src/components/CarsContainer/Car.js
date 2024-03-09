@@ -5,13 +5,15 @@ import {carActions} from "../../store";
 import {carService} from "../../services";
 
 const Car = ({car}) => {
-    const {id,brand,year,price} = car;
+
+    const {id, brand, price, year} = car;
+
     const dispatch = useDispatch();
 
-    const deleteCar = async () => {
-        await carService.deleteById(id)
-        dispatch(carActions.trigger())
-    }
+    const deleteById = async () => {
+        await carService.deleteById(id);
+        dispatch(carActions.trigger());
+    };
 
     return (
         <div>
@@ -19,12 +21,10 @@ const Car = ({car}) => {
             <div>brand:{brand}</div>
             <div>price:{price}</div>
             <div>year:{year}</div>
-            <button onClick={()=>dispatch(carActions.setCarForUpdate(car))}>update</button>
-            <button onClick={deleteCar}>delete</button>
-            <br/>
-            <br/>
+            <button onClick={() => dispatch(carActions.setCarForUpdate(car))}>update</button>
+            <button onClick={deleteById}>delete</button>
         </div>
     );
-}
+};
 
 export {Car};

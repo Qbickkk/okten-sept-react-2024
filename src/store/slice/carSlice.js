@@ -5,15 +5,14 @@ const initialState = {
     trigger: null,
     carForUpdate: null
 };
-
 const carSlice = createSlice({
     name: 'carSlice',
     initialState,
     reducers: {
-        setCars: (state, action) => {
+        setAllCars: (state, action) => {
             state.cars = action.payload
         },
-        trigger: (state) => {
+        trigger: state => {
             state.trigger = !state.trigger
         },
         setCarForUpdate: (state, actions) => {
@@ -26,7 +25,7 @@ const {reducer: carReducer, actions} = carSlice;
 
 const carActions = {
     ...actions
-}
+};
 
 export {
     carReducer,
